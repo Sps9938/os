@@ -30,7 +30,8 @@ int main() {
         perror("chdir failed");
         exit(1);
     }
-
+    
+    printf("Daemon started successfully with PID: %d\n", getpid());
     // Close standard file descriptors
     close(STDIN_FILENO);
     close(STDOUT_FILENO);
